@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intro_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="br.com.capivaras.android_pagbank.features.intro.splash.SplashFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment32"
+            app:destination="@id/loginFragment3" />
+    </fragment>
+
+        <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="br.com.capivaras.android_pagbank.features.intro.onboarding.OnBoardingFragment"
+        android:label="on_boarding_fragment"
+        tools:layout="@layout/on_boarding_fragment" >
+            <action
+                android:id="@+id/action_onBoardingFragment_to_loginFragment"
+                app:destination="@id/loginFragment3" />
+        </fragment>
+    <fragment
+        android:id="@+id/loginFragment3"
+        android:name="br.com.capivaras.android_pagbank.features.intro.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment3_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="br.com.capivaras.android_pagbank.features.home.HomeActivity"
+        android:label="HomeActivity"
+        tools:layout="@layout/home_activity"/>
+</navigation>

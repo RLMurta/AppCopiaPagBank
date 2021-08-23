@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.home.pix.transfer.pixFinalScreen.PixFinalFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".features.home.pix.transfer.pixFinalScreen.PixFinalFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/topAppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:title="Transferir com Pix" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/transferStatusImage"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_baseline_check_circle_outline_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topAppBarLayout" />
+
+        <TextView
+            android:id="@+id/transferStatusTextHolder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginEnd="76dp"
+            android:text="@string/transfer_completed_succesfully"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/transferStatusImage" />
+
+        <TextView
+            android:id="@+id/transferStatusDateAndTimeHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/date_and_hour_holder"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/transferStatusTextHolder"
+            app:layout_constraintStart_toStartOf="@id/transferStatusTextHolder"
+            app:layout_constraintTop_toBottomOf="@id/transferStatusTextHolder" />
+
+        <ImageView
+            android:id="@+id/transferDivider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/greyish_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/transferStatusDateAndTimeHolder" />
+
+        <TextView
+            android:id="@+id/transferValueTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/value_of_the_transfer"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/transferDivider" />
+
+        <TextView
+            android:id="@+id/transferValueHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/two_money"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/transferValueTitle" />
+
+        <TextView
+            android:id="@+id/transferTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/to"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/transferValueHolder"
+            app:layout_constraintStart_toStartOf="@id/transferValueHolder"
+            app:layout_constraintTop_toBottomOf="@id/transferValueHolder" />
+
+        <TextView
+            android:id="@+id/transferToNameHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_holder"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/transferTo" />
+
+        <TextView
+            android:id="@+id/transferToId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Email: "
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/transferToIdHolder"
+            app:layout_constraintStart_toStartOf="@id/transferToNameHolder"
+            app:layout_constraintTop_toBottomOf="@id/transferToNameHolder" />
+
+        <TextView
+            android:id="@+id/transferToIdHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="xxx.xxx.xxx-xx"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/transferToId"
+            app:layout_constraintEnd_toEndOf="@id/transferToNameHolder"
+            app:layout_constraintTop_toBottomOf="@id/transferToNameHolder" />
+
+        <ImageView
+            android:id="@+id/bankIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_baseline_account_balance_24"
+            app:layout_constraintStart_toStartOf="@id/transferToNameHolder"
+            app:layout_constraintTop_toBottomOf="@id/transferToId" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@color/greyish_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bankIcon">
+
+            <TextView
+                android:id="@+id/constraintLayoutTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="O que você deseja fazer agora?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/button1"
+                layout="@layout/pix_final_fragment_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutTextView" />
+
+            <include
+                android:id="@+id/button2"
+                layout="@layout/pix_final_fragment_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button1" />
+
+            <include
+                android:id="@+id/button3"
+                layout="@layout/pix_final_fragment_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

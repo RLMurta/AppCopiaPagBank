@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iconProcessedExtract"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_baseline_more_horiz_gree"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/timeProcessedExtract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="10:16"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/iconProcessedExtract"
+                app:layout_constraintBottom_toBottomOf="@id/iconProcessedExtract"
+                app:layout_constraintTop_toTopOf="@id/iconProcessedExtract" />
+
+            <ImageView
+                android:id="@+id/extractsCardBar"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/light_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/iconProcessedExtract"
+                app:layout_constraintStart_toStartOf="@id/iconProcessedExtract"
+                app:layout_constraintTop_toBottomOf="@id/iconProcessedExtract" />
+
+            <TextView
+                android:id="@+id/statusProcessedExtract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="Pagamento"
+                android:textColor="@color/pagGreen"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/extractsCardBar"
+                app:layout_constraintTop_toBottomOf="@id/timeProcessedExtract" />
+
+            <TextView
+                android:id="@+id/type_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="Venda digitada"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/statusProcessedExtract"
+                app:layout_constraintTop_toBottomOf="@id/statusProcessedExtract" />
+
+            <TextView
+                android:id="@+id/extractsCardValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="50,00"
+                android:textColor="@color/pagGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/extractsCardButton"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toEndOf="@id/extractsCardValue"
+                app:layout_constraintTop_toBottomOf="@id/extractsCardValue"
+                app:srcCompat="@drawable/paggreen_ic_baseline_arrow_forward_ios_24" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_pix_activity"
+            app:destination="@id/pix_activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/extractMainFragment2"
+        tools:layout="@layout/extract_main_fragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.extract.initialScreen.ExtractMainFragment"
+        android:label="ExtractMainFragment" />
+
+    <activity
+        android:id="@+id/pix_activity"
+        android:name="br.com.capivaras.android_pagbank.features.home.pix.PixActivity"
+        android:label="PixQrCodeActivity"
+        tools:layout="@layout/pix_fragment" />
+</navigation>

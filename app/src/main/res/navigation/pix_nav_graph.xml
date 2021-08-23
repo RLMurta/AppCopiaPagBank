@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pix_nav_graph"
+    app:startDestination="@id/pixFragment">
+
+    <fragment
+        android:id="@+id/pixFragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.pix.PixFragment"
+        android:label="PixFragment"
+        tools:layout="@layout/pix_fragment">
+        <action
+            android:id="@+id/action_pixFragment_to_pixInitialFragment"
+            app:destination="@id/pixInitialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixOnBoardingFragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.pix.pixOnBoarding.PixOnBoardingFragment"
+        android:label="pix_on_boarding_fragment"
+        tools:layout="@layout/pix_on_boarding_fragment" >
+        <action
+            android:id="@+id/action_pixOnBoardingFragment_to_pixFragment"
+            app:destination="@id/pixFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixInitialFragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.pix.transfer.pixInitialScreen.PixInitialFragment"
+        android:label="transfer_pix"
+        tools:layout="@layout/transfer_pix" >
+        <action
+            android:id="@+id/action_pixInitialFragment_to_pixEmailFragment"
+            app:destination="@id/pixEmailFragment" />
+        <action
+            android:id="@+id/action_pixInitialFragment_to_pixFragment"
+            app:destination="@id/pixFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixEmailFragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.pix.transfer.PixInsertEmailScreen.PixInsertEmailFragment"
+        android:label="PixEmailFragment"
+        tools:layout="@layout/transfer_pix_email">
+        <action
+            android:id="@+id/action_pixEmailFragment_to_pixInsertDescriptionFragment2"
+            app:destination="@id/pixInsertDescriptionFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixInsertDescriptionFragment2"
+        android:name="br.com.capivaras.android_pagbank.features.home.pix.transfer.pixInsertDescriptionScreen.PixInsertDescriptionFragment"
+        android:label="PixInsertDescriptionFragment"
+        tools:layout="@layout/pix_insert_description_fragment" >
+        <action
+            android:id="@+id/action_pixInsertDescriptionFragment2_to_pixInsertValueFragment"
+            app:destination="@id/pixInsertValueFragment" />
+        <argument
+            android:name="receivePix"
+            app:argType="br.com.capivaras.android_pagbank.features.home.pix.transfer.pixValidationApi.model.PixValidationPayload" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixInsertValueFragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.pix.transfer.pixInsertValueScreen.PixInsertValueFragment"
+        android:label="PixInsertValueFragment"
+        tools:layout="@layout/pix_insert_value_fragment" >
+        <action
+            android:id="@+id/action_pixInsertValueFragment_to_pixConfirmationFragment"
+            app:destination="@id/pixConfirmationFragment" />
+        <argument
+            android:name="receivePix"
+            app:argType="br.com.capivaras.android_pagbank.features.home.pix.transfer.pixValidationApi.model.PixValidationPayload" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixConfirmationFragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.pix.transfer.pixConfirmationScreen.PixConfirmationFragment"
+        android:label="PixConfirmationFragment"
+        tools:layout="@layout/pix_confirmation_fragment" >
+        <action
+            android:id="@+id/action_pixConfirmationFragment_to_pixFinalFragment"
+            app:destination="@id/pixFinalFragment" />
+        <argument
+            android:name="receivePix"
+            app:argType="br.com.capivaras.android_pagbank.features.home.pix.transfer.pixValidationApi.model.PixValidationPayload" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixFinalFragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.pix.transfer.pixFinalScreen.PixFinalFragment"
+        android:label="pix_final_fragment"
+        tools:layout="@layout/pix_final_fragment" >
+        <action
+            android:id="@+id/action_pixFinalFragment_to_pixInitialFragment"
+            app:destination="@id/pixInitialFragment" />
+        <argument
+            android:name="receivePixToken"
+            app:argType="string"/>
+    </fragment>
+</navigation>

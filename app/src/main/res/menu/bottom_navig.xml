@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homeFragment"
+    android:enabled="true"
+    android:icon="@drawable/ic_baseline_home_24"
+    android:title="@string/start"/>
+
+    <item android:id="@+id/extractMainFragment2"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="@string/content_description_extract"/>
+
+    <item android:id="@+id/vendas"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_store_24"
+        android:title="@string/sales"/>
+
+    <item android:id="@+id/cartoes"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_credit_card_24"
+        android:title="@string/menu_home_cards"/>
+
+</menu>

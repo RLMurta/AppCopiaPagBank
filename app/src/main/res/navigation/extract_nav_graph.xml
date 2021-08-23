@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/extract_nav_graph"
+    app:startDestination="@id/filterFragment">
+
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="br.com.capivaras.android_pagbank.features.home.extract.filter.FilterFragment"
+        android:label="FilterFragment"
+        tools:layout="@layout/filter_fragment">
+    </fragment>
+
+</navigation>
